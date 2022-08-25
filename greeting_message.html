@@ -1,0 +1,42 @@
+<html>
+<head>
+  <title>Greetings Message</title>
+  <style>
+#lbl {
+        font-family: monospace;
+        font-size: xx-large;
+        color: #626262;
+        padding: 5px;
+        border: 1px solid #ececec;
+        text-align: center;
+        line-height: 1.5;
+        height:85%
+}
+#date{
+      font-size:large;
+}
+body{
+    background-color: aliceblue;
+}
+  </style>
+</head>
+<body>
+  <div id="lbl"></div>
+</body>
+
+<script>
+    var today = new Date();
+    var hrs = today.getHours();
+    var greet;
+    
+    if (hrs < 12)
+        greet = 'Good Morning Lucas ';
+    else if (hrs >= 12 && hrs <= 17)
+        greet = 'Good Afternoon Lucas ';
+    else if (hrs >= 17 && hrs <=24)
+        greet = 'Good Evening Lucas ';
+        
+    document.getElementById('lbl').innerHTML =
+        greet;
+ </script>
+ </html>
